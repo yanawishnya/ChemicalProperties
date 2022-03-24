@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Identity;
 
 namespace ChemicalPropertiesApp.Areas.Identity.Data;
 
-// Add profile data for application users by adding properties to the ChemicalPropertiesAppUser class
 public class ChemicalPropertiesAppUser : IdentityUser
 {
     [PersonalData]
