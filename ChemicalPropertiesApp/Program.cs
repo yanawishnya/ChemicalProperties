@@ -6,7 +6,7 @@ using ChemicalPropertiesApp.Data;
 using ChemicalPropertiesApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("AuthDbContextConnection");
+var connectionString = builder.Configuration.GetConnectionString("default");
 builder.Services.AddDbContext<AuthDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDefaultIdentity<ChemicalPropertiesAppUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -16,7 +16,7 @@ builder.Services.AddControllersWithViews();
 
 // Usage of Dapper + SQL Server below here.
 builder.Services.AddTransient<IUserRepository, UserRepositorySqlServer>(provider =>
-    new UserRepositorySqlServer(builder.Configuration.GetConnectionString("AuthDbContextConnection")));
+    new UserRepositorySqlServer(builder.Configuration.GetConnectionString("default")));
 
 var app = builder.Build();
 

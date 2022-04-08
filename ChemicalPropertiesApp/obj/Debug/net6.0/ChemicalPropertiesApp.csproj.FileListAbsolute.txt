@@ -269,3 +269,15 @@ D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\
 D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\obj\Debug\net6.0\ChemicalPropertiesApp.MvcApplicationPartsAssemblyInfo.cs
 D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\obj\Debug\net6.0\ChemicalPropertiesApp.csproj.CopyComplete
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\Dapper.dll
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\EntityFramework.dll
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\Microsoft.AspNet.Identity.Owin.dll
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\Microsoft.Owin.dll
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\Microsoft.Owin.Host.SystemWeb.dll
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\Microsoft.Owin.Security.dll
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\Microsoft.Owin.Security.Cookies.dll
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\Microsoft.Owin.Security.OAuth.dll
+D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp\bin\Debug\net6.0\Owin.dll
