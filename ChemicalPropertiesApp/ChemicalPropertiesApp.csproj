@@ -10,8 +10,10 @@
         <PackageReference Include="Dapper" Version="2.0.123" />
         <PackageReference Include="Microsoft.AspNet.Identity.EntityFramework" Version="2.0.0" />
         <PackageReference Include="Microsoft.AspNet.Identity.OWIN" Version="2.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.3" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.3" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.3">
             <PrivateAssets>all</PrivateAssets>
@@ -22,6 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Folder Include="Areas\Identity\Pages\LitReferences" />
         <Folder Include="wwwroot\data" />
     </ItemGroup>
 

@@ -7,7 +7,7 @@ public class ChemicalPropertiesAppUser : IdentityUser
 {
     [PersonalData]
     [Column(TypeName = "nvarchar(100)")]
-    public string FirstName { get; set; }
+    public string Login { get; set; }
 
     [PersonalData]
     [Column(TypeName = "nvarchar(100)")]

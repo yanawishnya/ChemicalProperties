@@ -31,6 +31,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/LitReferences/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcTGl0UmVmZXJlbmNlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/LitReferences/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcTGl0UmVmZXJlbmNlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/LitReferences/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcTGl0UmVmZXJlbmNlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/LitReferences/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcTGl0UmVmZXJlbmNlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/LitReferences/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcTGl0UmVmZXJlbmNlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/_AuthLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX0F1dGhMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -49,6 +69,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/Home/LitReferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXRSZWZlcmVuY2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/Home/Privacy.cshtml]
