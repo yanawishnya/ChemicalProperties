@@ -25,6 +25,7 @@
 
     <ItemGroup>
         <Folder Include="Areas\Identity\Pages\LitReferences" />
+        <Folder Include="Areas\Identity\Pages\RubricsInfo" />
         <Folder Include="wwwroot\data" />
     </ItemGroup>
 

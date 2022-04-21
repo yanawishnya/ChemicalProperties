@@ -1,13 +1,12 @@
-using System.Configuration;
 using ChemicalPropertiesApp.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ChemicalPropertiesApp.Data;
 using ChemicalPropertiesApp.Models;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<RubricsContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RubricsContext")));
 
 builder.Services.AddDbContext<TableContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TableContext")));
@@ -43,8 +42,11 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<TableContext>();
+    var rubricContext = services.GetRequiredService<RubricsContext>();
     context.Database.EnsureCreated();
-    DbInitializer.Initialize(context);
+    rubricContext.Database.EnsureCreated();
+    DbInitializer.TableInitialize(context);
+    DbInitializer.RubricsInitialize(rubricContext);
 }
 
 app.UseHttpsRedirection();
