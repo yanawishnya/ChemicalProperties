@@ -1,8 +1,6 @@
 using ChemicalPropertiesApp.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Data.Entity;
-using IdentityDbContext = Microsoft.AspNet.Identity.EntityFramework.IdentityDbContext;
 
 namespace ChemicalPropertiesApp.Data;
 

@@ -26,7 +26,18 @@
     <ItemGroup>
         <Folder Include="Areas\Identity\Pages\LitReferences" />
         <Folder Include="Areas\Identity\Pages\RubricsInfo" />
+        <Folder Include="Areas\Identity\Pages\Tables" />
         <Folder Include="wwwroot\data" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Tables\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Tables\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Tables\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Tables\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Tables\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Tables\PhaseEquilibriaTable.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Tables\SolidPhaseTable.cshtml" />
     </ItemGroup>
 
 </Project>

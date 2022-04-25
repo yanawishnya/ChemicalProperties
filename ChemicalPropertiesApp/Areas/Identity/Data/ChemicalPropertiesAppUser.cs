@@ -8,12 +8,12 @@ public class ChemicalPropertiesAppUser : IdentityUser
     [PersonalData]
     [Column(TypeName = "nvarchar(100)")]
     public string Login { get; set; }
+    
+    [PersonalData]
+    [Column(TypeName = "nvarchar(100)")]
+    public string FirstName { get; set; }
 
     [PersonalData]
     [Column(TypeName = "nvarchar(100)")]
     public string LastName { get; set; }
-
-    [PersonalData]
-    [Column(TypeName = "nvarchar(100)")]
-    public string Patronymic { get; set; }
 }
