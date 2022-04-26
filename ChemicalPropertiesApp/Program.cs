@@ -7,16 +7,10 @@ using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<RubricsContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("RubricsContext")));
+builder.Services.AddDbContext<MisisContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("misis")));
 
-builder.Services.AddDbContext<TableContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("TableContext")));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
-/*
-builder.Services.AddDbContext<AllTablesContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("AllTablesContext")));*/
 
 var connectionString = builder.Configuration.GetConnectionString("default");
 builder.Services.AddDbContext<AuthDbContext>(options =>
@@ -32,11 +26,6 @@ builder.Services.AddDefaultIdentity<ChemicalPropertiesAppUser>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-
-builder.Services.AddDbContext<TablesContext>(options =>
-
-    options.UseSqlServer(builder.Configuration.GetConnectionString("TablesContext")));
-
 
 // Usage of Dapper + SQL Server below here.
 builder.Services.AddTransient<IUserRepository, UserRepositorySqlServer>(provider =>
@@ -58,20 +47,6 @@ else
 {
     app.UseDeveloperExceptionPage();
     app.UseMigrationsEndPoint();
-}
-
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<TableContext>();
-    var rubricContext = services.GetRequiredService<RubricsContext>();
-    var allTablesContext = services.GetRequiredService<TablesContext>();
-    context.Database.EnsureCreated();
-    rubricContext.Database.EnsureCreated();
-    allTablesContext.Database.EnsureCreated();
-    DbInitializer.TableInitialize(context);
-    DbInitializer.RubricsInitialize(rubricContext);
-    DbInitializer.AllTablesInitialize(allTablesContext);
 }
 
 using var scopeServ = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
