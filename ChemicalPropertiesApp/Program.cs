@@ -1,9 +1,9 @@
 using ChemicalPropertiesApp;
-using ChemicalPropertiesApp.Areas.Identity.Data;
 using Microsoft.EntityFrameworkCore;
-using ChemicalPropertiesApp.Data;
 using ChemicalPropertiesApp.Models;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Owin.Security.Cookies;
+using CookieAuthenticationDefaults = Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationDefaults;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,17 +12,6 @@ builder.Services.AddDbContext<MisisContext>(options =>
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-var connectionString = builder.Configuration.GetConnectionString("default");
-builder.Services.AddDbContext<AuthDbContext>(options =>
-    options.UseSqlServer(connectionString));
-builder.Services.AddDefaultIdentity<ChemicalPropertiesAppUser>(options =>
-    {
-        options.SignIn.RequireConfirmedAccount = false;
-        options.Password.RequiredLength = 5;
-        options.User.RequireUniqueEmail = true;
-        options.SignIn.RequireConfirmedEmail = false;
-    })
-    .AddEntityFrameworkStores<AuthDbContext>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
@@ -31,8 +20,13 @@ builder.Services.AddRazorPages();
 builder.Services.AddTransient<IUserRepository, UserRepositorySqlServer>(provider =>
     new UserRepositorySqlServer(builder.Configuration.GetConnectionString("default")));
 
-builder.Services.AddAuthentication("MyCookieAuth")
-    .AddCookie("MyCookieAuth", options => { options.Cookie.Name = "MyCookieAuth"; });
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+{
+    options.LoginPath = new PathString("/Account/Login");
+});
+
+/*builder.Services.AddAuthentication("MyCookieAuth")
+    .AddCookie("MyCookieAuth", options => { options.Cookie.Name = "MyCookieAuth"; });*/
 
 var app = builder.Build();
 
