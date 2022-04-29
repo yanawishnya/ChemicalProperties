@@ -1,8 +1,7 @@
 using ChemicalPropertiesApp;
 using Microsoft.EntityFrameworkCore;
 using ChemicalPropertiesApp.Models;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Owin.Security.Cookies;
+
 using CookieAuthenticationDefaults = Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationDefaults;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -43,8 +42,8 @@ else
     app.UseMigrationsEndPoint();
 }
 
-using var scopeServ = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
-SeedData.EnsureSeedData(scopeServ.ServiceProvider);
+/*using var scopeServ = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
+SeedData.EnsureSeedData(scopeServ.ServiceProvider);*/
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ChemicalPropertiesApp.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace ChemicalPropertiesApp.Controllers;
 
@@ -16,11 +17,6 @@ public class HomeController : Controller
 
     [Authorize]
     public IActionResult Index()
-    {
-        return View();
-    }
-
-    public IActionResult Privacy()
     {
         return View();
     }
