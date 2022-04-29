@@ -15,60 +15,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/LitReferences/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcTGl0UmVmZXJlbmNlc1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/LitReferences/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcTGl0UmVmZXJlbmNlc1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/LitReferences/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcTGl0UmVmZXJlbmNlc1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/LitReferences/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcTGl0UmVmZXJlbmNlc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/LitReferences/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcTGl0UmVmZXJlbmNlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/RubricsInfo/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUnVicmljc0luZm9cQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/RubricsInfo/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUnVicmljc0luZm9cRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/RubricsInfo/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUnVicmljc0luZm9cRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/RubricsInfo/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUnVicmljc0luZm9cRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/RubricsInfo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcUnVicmljc0luZm9cSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/Tables/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcVGFibGVzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/Tables/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcVGFibGVzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/Tables/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcVGFibGVzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/Tables/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcVGFibGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/Tables/Index.cshtml]
@@ -111,6 +63,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/LitReference/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl0UmVmZXJlbmNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/RubricsInfo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUnVicmljc0luZm9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -121,6 +81,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/Table/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/_ViewImports.cshtml]
