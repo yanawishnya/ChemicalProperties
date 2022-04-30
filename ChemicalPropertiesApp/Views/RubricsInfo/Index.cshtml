@@ -1,0 +1,59 @@
+﻿@model ChemicalPropertiesApp.Models.Rubric
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h2>Статьи</h2>
+</div>
+
+<form asp-controller="RubricsInfo" asp-action="Index">
+    <p>
+        Название: <input type="text" name="searchString"/>
+        <input type="submit" value="Искать"/>
+    </p>
+    <a href="javascript:window.location.reload()">Обратно к списку</a>
+</form>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Дата добавления
+        </th>
+        <th>
+            Название
+        </th>
+        <th>
+            Тип
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.rubricsInfos)
+    {
+        <tr>
+            <td>
+                @item.Created
+            </td>
+            <td>
+                @item.RubricName
+            </td>
+            <td>
+                @Model.typesInfos.FirstOrDefault(r => r.TypeId == item.TypeId)?.TypeName
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@if (ViewContext.HttpContext.User.IsInRole("privileged"))
+{
+    <div class="text-center">
+        <form asp-action="Export" asp-controller="RubricsInfo" method="post">
+            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу</button>
+        </form>
+    </div>
+}

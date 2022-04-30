@@ -1,0 +1,27 @@
+﻿@model ChemicalPropertiesApp.ViewModels.LoginModel
+
+<form asp-action="Login" asp-controller="Account" asp-antiforgery="true" class="col-lg-6 offset-lg-3">
+    <!-- Email input -->
+    <div class="validation" asp-validation-summary="ModelOnly"></div>
+    <div class="justify-content-center text-center">
+        <h4>Вход</h4>
+        <div class="form-outline mb-4 pt-3">
+            <input type="text" placeholder="Введите логин" asp-for="Login" class="form-control"/>
+            <span asp-validation-for="Login"></span>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+            <input type="password" placeholder="Введите пароль" asp-for="Password" class="form-control"/>
+            <span asp-validation-for="Password"></span>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block col-xs-12 col-xs-offset-0 col-sm-offset-3 col-sm-12">Войти</button>
+
+        <!-- Register buttons -->
+        <div class="text-center pt-3">
+            <p>Ещё не зарегистрированы? <a asp-action="Register" asp-controller="Account">Зарегистрироваться</a></p>
+        </div>
+    </div>
+</form>

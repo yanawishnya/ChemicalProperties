@@ -1,0 +1,72 @@
+﻿@model ChemicalPropertiesApp.Models.UsersInfo
+
+
+<div class="text-center">
+    <h2>Личный кабинет</h2>
+</div>
+
+<div class="text-center mt-4">
+    <h4>Основные данные</h4>
+</div>
+
+<div class="container-fluid text-center mt-3 col-lg-6 offset-lg-3">
+    <div class="row">
+        <div class="mt-3">
+            <input type="text" asp-for="Email" value="@Model.Email" placeholder="Электронная почта"/>
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="mt-3">
+            <input type="text" asp-for="Login" value="@Model.Login" placeholder="Логин"/>
+            <span asp-validation-for="Login"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="mt-3">
+            <input type="password" asp-for="Password" value="@Model.Password" placeholder="Пароль"/>
+            <span asp-validation-for="Password"></span>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <h4>Личная информация</h4>
+</div>
+
+<div class="container-fluid text-center mt-3 col-lg-6 offset-lg-3">
+    <div class="mt-3">
+        <input type="text" asp-for="LastName" value="@Model.LastName" placeholder="Фамилия"/>
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <div class="mt-3">
+        <input type="text" asp-for="FirstName" value="@Model.FirstName" placeholder="Имя"/>
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <div class="mt-3">
+        <input type="text" asp-for="Patronymic" value="@Model.Patronymic" placeholder="Отчество"/>
+        <span asp-validation-for="Patronymic"></span>
+    </div>
+    <div class="row">
+        <div class="mt-3">
+            <input type="text" asp-for="Area" value="@Model.Area" placeholder="Область"/>
+            <span asp-validation-for="Area"></span>
+        </div>
+        <div class="mt-3">
+            <input type="text" asp-for="City" value="@Model.City" placeholder="Город"/>
+            <span asp-validation-for="City"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="mt-3">
+            <input type="text" asp-for="IndexCode" value="@Model.IndexCode" placeholder="Почтовый индекс"/>
+            <span asp-validation-for="IndexCode"></span>
+        </div>
+        <div class="mt-3">
+            <input type="text" asp-for="Address" value="@Model.Address" placeholder="Адрес"/>
+            <span asp-validation-for="Address"></span>
+        </div>
+    </div>
+    <div class="mt-3">
+        <input type="text" asp-for="Phone" value="@Model.Phone" placeholder="Номер телефона"/>
+        <span asp-validation-for="Phone"></span>
+    </div>
+</div>

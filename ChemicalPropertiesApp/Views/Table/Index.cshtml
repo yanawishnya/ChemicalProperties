@@ -1,0 +1,299 @@
+﻿@model ChemicalPropertiesApp.Models.Table
+
+@{
+    ViewData["Title"] = "Таблицы";
+}
+
+<div class="text-center">
+    <h2>Таблицы</h2>
+</div>
+
+<table class="table table-bordered caption-top">
+    <caption>Твёрдые фазы</caption>
+    <thead>
+    <tr>
+        <th>
+            Название фазы /<br/>Температурный диапазон (в градусах по Цельсию)
+        </th>
+        <th>
+            Символ Пирсона /<br/>Пространственная группа /<br/>Прототип
+        </th>
+        <th>
+            Параметры решётки
+        </th>
+        <th>
+            Комментарий
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.solidPhaseTable)
+    {
+        <tr>
+            <td>
+                @item.Formula<br/>
+                @item.Temperature1 &lt; @item.Temperature2
+            </td>
+            <td>
+                @item.PearsonSymbol<br/>
+                @item.SpaceGroup<br/>
+                @item.Prototype
+            </td>
+            <td>
+                @if (item.LatticeA != null)
+                {
+                    @: a = @item.LatticeA"
+                }
+                <br/>
+                @if (item.LatticeAlpha != null)
+                {
+                    @: alpha = @item.LatticeAlpha"
+                }
+                <br/>
+                @if (item.LatticeB != null)
+                {
+                    @: b = @item.LatticeB"
+                }
+                <br/>
+                @if (item.LatticeBeta != null)
+                {
+                    @: beta = @item.LatticeBeta"
+                }
+                <br/>
+                @if (item.LatticeC != null)
+                {
+                    @: c = @item.LatticeC"
+                }
+                <br/>
+                @if (item.LatticeGamma != null)
+                {
+                    @: gamma = @item.LatticeGamma"
+                }
+                <br/>
+            </td>
+            <td>
+                @item.Comment
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@if (ViewContext.HttpContext.User.IsInRole("privileged"))
+{
+    <div class="text-center">
+        <form asp-action="ExportSolid" asp-controller="Table" method="post">
+            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу с твёрдыми фазами</button>
+        </form>
+    </div>
+}
+
+<table class="table table-bordered caption-top">
+    <caption>Фазовые равновесия</caption>
+    <thead>
+    <tr>
+        <th>
+            Температура (в градусах Цельсия) /<br/>Продолжительность отжига (в днях)
+        </th>
+        <th>
+            Сплавы (в %) (EDS)
+        </th>
+        <th>
+            Равновесия<br/>фаза 1 / фаза 2 / фаза 3
+        </th>
+        <th>
+            Состав (в %)<br/>
+            Первая фаза<br/>
+        </th>
+        <th>
+            Состав (в %)<br/>
+            Вторая фаза<br/>
+        </th>
+        <th>
+            Состав (в %)<br/>
+            Третья фаза<br/>
+        </th>
+    </tr>
+    </thead>
+    @*<tbody>
+    @foreach (var item in Model.phaseEquilibriaTable)
+    {
+        <tr>
+            <td>
+                @item.Temperature / @item.AnnealedTime
+            </td>
+            <td>
+                @foreach (var detailItem in Model.phaseEquilibriaDetailTable)
+                {
+                    @detailItem.PhaseEquilibria.
+                }
+            </td>
+            <td>
+                a = @Html.DisplayFor(modelItem => item.LatticeA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+        </tr>
+    }
+    </tbody>*@
+</table>
+
+@if (ViewContext.HttpContext.User.IsInRole("privileged"))
+{
+    <div class="text-center">
+        <form asp-action="" asp-controller="Table" method="post">
+            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу с твёрдыми фазами</button>
+        </form>
+    </div>
+}
+
+<table class="table table-bordered caption-top">
+    <caption>Энтальпия</caption>
+    <thead>
+    <tr>
+        <th>
+            Реакция или транформация
+        </th>
+        <th>
+            Температура
+        </th>
+        <th>
+            Энтальпия
+        </th>
+        <th>
+            Комментарий
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.thermodynamicDataEnthalphyTable)
+    {
+        <tr>
+            <td>
+                @item.Reaction
+            </td>
+            <td>
+                @item.Temperature1 &mdash; @item.Temperature2
+            </td>
+            <td>
+                @item.Enthalpy
+            </td>
+            <td>
+                @item.Comment
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@if (ViewContext.HttpContext.User.IsInRole("privileged"))
+{
+    <div class="text-center">
+        <form asp-action="ExportEnthalpy" asp-controller="Table" method="post">
+            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу</button>
+        </form>
+    </div>
+}
+
+<table class="table table-bordered caption-top">
+    <caption>Активность</caption>
+    <thead>
+    <tr>
+        <th>
+            Элемент
+        </th>
+        <th>
+            Температура
+        </th>
+        <th>
+            Состав
+        </th>
+        <th>
+            Активность
+        </th>
+        <th>
+            Комментарий
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.thermodynamicDataActivityTable)
+    {
+        <tr>
+            <td>
+                @item.Element
+            </td>
+            <td>
+                @item.Temperature
+            </td>
+            <td>
+                @item.Composition
+            </td>
+            <td>
+                @item.Activity
+            </td>
+            <td>
+                @item.Comment
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@if (ViewContext.HttpContext.User.IsInRole("privileged"))
+{
+    <div class="text-center">
+        <form asp-action="ExportActivity" asp-controller="Table" method="post">
+            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу</button>
+        </form>
+    </div>
+}
+
+<table class="table table-bordered caption-top">
+    <caption>Теплоёмкость</caption>
+    <thead>
+    <tr>
+        <th>
+            Фаза
+        </th>
+        <th>
+            Температура
+        </th>
+        <th>
+            Теплоёмкость
+        </th>
+        <th>
+            Комментарий
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.thermodynamicDataCapacityTable)
+    {
+        <tr>
+            <td>
+                @item.Phase
+            </td>
+            <td>
+                @item.Temperature
+            </td>
+            <td>
+                @item.HeatCapacity
+            </td>
+            <td>
+                @item.Comment
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@if (ViewContext.HttpContext.User.IsInRole("privileged"))
+{
+    <div class="text-center">
+        <form asp-action="ExportHeatCapacity" asp-controller="Table" method="post">
+            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу</button>
+        </form>
+    </div>
+}

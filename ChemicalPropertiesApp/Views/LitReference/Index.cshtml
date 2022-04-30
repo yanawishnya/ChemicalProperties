@@ -1,0 +1,94 @@
+﻿@model IEnumerable<LitReference>
+
+@{
+    ViewData["Title"] = "Литературные ссылки";
+}
+
+<div class="text-center">
+    <h2>Литературные ссылки</h2>
+</div>
+
+<form asp-controller="LitReference" asp-action="Index">
+    <p>
+        Название: <input type="text" name="searchString"/>
+        <input type="submit" value="Искать"/>
+    </p>
+</form>
+
+<table class="table mt-4">
+    <thead>
+    <tr>
+        <th>
+            Авторы
+        </th>
+        <th>
+            Название
+        </th>
+        <th>
+            Журнал
+        </th>
+        <th>
+            Год издания
+        </th>
+        <th>
+            Том
+        </th>
+        <th>
+            Номер издания
+        </th>
+        <th>
+            Отрывок
+        </th>
+        <th>
+            DOI
+        </th>
+        <th>
+            BibTeX
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Authors
+            </td>
+            <td>
+                @item.Title
+            </td>
+            <td>
+                @item.Journal
+            </td>
+            <td>
+                @item.Year
+            </td>
+            <td>
+                @item.Vol
+            </td>
+            <td>
+                @item.Num
+            </td>
+            <td>
+                стр. @item.StartPage - @item.EndPage
+            </td>
+            <td>
+                @item.Doi
+            </td>
+            <td>
+                @item.BibTeX
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@if (ViewContext.HttpContext.User.IsInRole("privileged"))
+{
+    <div class="text-center">
+        <form asp-action="Export" asp-controller="LitReference" method="post">
+            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу</button>
+        </form>
+    </div>
+}
