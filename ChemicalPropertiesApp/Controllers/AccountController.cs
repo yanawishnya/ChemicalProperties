@@ -107,4 +107,9 @@ public class AccountController : Controller
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         return RedirectToAction("Login", "Account");
     }
+
+    public IActionResult Upgrade()
+    {
+        return RedirectToAction("Index", "Home");
+    }
 }

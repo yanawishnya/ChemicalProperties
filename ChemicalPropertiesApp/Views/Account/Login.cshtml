@@ -11,12 +11,12 @@
         <div class="container h-100">
             <div class="row d-flex mt-3 justify-content-center h-100">
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                    <div class="card shadow-2" style="border-radius: 15px;">
+                    <div class="card shadow" style="border-radius: 15px;">
                         <div class="card-body p-5">
-                            <h4 class="text-center mb-5">Вход</h4>
+                            <h4 class="fw-bold text-center mb-3">Вход</h4>
                             <form asp-action="Login" asp-controller="Account" asp-anti-forgery="true">
                                 <div class="validation" asp-validation-summary="ModelOnly"></div>
-                                <div class="form-outline mb-4">
+                                <div class="form-outline mt-5 mb-4">
                                     <input type="text" placeholder="Введите логин" asp-for="Login" class="form-control"/>
                                     <span class="field-validation-error" asp-validation-for="Login"></span>
                                 </div>

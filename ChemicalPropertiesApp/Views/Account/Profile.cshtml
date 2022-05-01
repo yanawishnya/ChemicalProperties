@@ -1,74 +1,97 @@
 ﻿@model ChemicalPropertiesApp.Models.UsersInfo
 
-
-<div class="text-center">
-    <h2>Личный кабинет</h2>
-</div>
-
-
-
-<div class="text-center mt-4">
-    <h4>Основные данные</h4>
-</div>
-
-<div class="container-fluid text-center mt-3 col-lg-6 offset-lg-3">
-    <div class="row">
-        <div class="mt-3">
-            <input type="text" asp-for="Email" value="@Model.Email" placeholder="Электронная почта"/>
-            <span asp-validation-for="Email"></span>
+<section class="vh-100">
+    <div class="mask d-flex mt-3 h-100">
+        <div class="container h-100">
+            <div class="row d-flex mt-3 justify-content-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card shadow" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+                            @if (ViewContext.HttpContext.User.IsInRole("basic"))
+                            {
+                                <div class="align-content-center text-center">
+                                    <h4 class="fw-bold text-center mb-5">Повысить уровень доступа</h4>
+                                    <div class="col-md-12 mt-5 mb-4">
+                                        <textarea class="form-control" rows="3" placeholder="Обоснование повышения уровня"></textarea>
+                                    </div>
+                                    <form asp-action="Upgrade" asp-controller="Account" method="post">
+                                        <button class="btn btn-primary btn-block col-xs-6 col-xs-offset-0 col-sm-offset-3 col-sm-6 mt-4 mb-3" type="submit">Отправить</button>
+                                    </form>
+                                </div>
+                                <hr class="mt-4 mb-4"/>
+                            }
+                            <h4 class="fw-bold text-center mb-3 mt-5">Основная информация</h4>
+                            <div class="form-outline mt-5 mb-4">
+                                <label class="text-muted">Электронная почта</label>
+                                <input type="text" asp-for="Email" value="@Model.Email" placeholder="Электронная почта" class="form-control"/>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="text-muted">Логин</label>
+                                <input type="text" asp-for="Login" value="@Model.Login" placeholder="Логин" class="form-control"/>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="text-muted">Пароль</label>
+                                <input type="password" asp-for="Password" value="@Model.Password" placeholder="Пароль" class="form-control"/>
+                            </div>
+                            <hr/>
+                            <div class="form-outline mt-3 mb-4">
+                                <label class="text-muted">Фамилия</label>
+                                <input type="text" asp-for="LastName" value="@Model.LastName" placeholder="Фамилия" class="form-control"/>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="text-muted">Имя</label>
+                                <input type="text" asp-for="FirstName" value="@Model.FirstName" placeholder="Имя" class="form-control"/>
+                            </div>
+                            <div class="form-outline mb-4">
+                                @if (Model.Patronymic != null)
+                                {
+                                    <label class="text-muted">Отчество</label>
+                                }
+                                <input type="text" asp-for="Patronymic" value="@Model.Patronymic" placeholder="Отчество" class="form-control"/>
+                            </div>
+                            <div class="row">
+                                <div class="form-outline mb-4">
+                                    @if (Model.Area != null)
+                                    {
+                                        <label class="text-muted">Область</label>
+                                    }
+                                    <input type="text" asp-for="Area" value="@Model.Area" placeholder="Область" class="form-control"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    @if (Model.City != null)
+                                    {
+                                        <label class="text-muted">Город</label>
+                                    }
+                                    <input type="text" asp-for="City" value="@Model.City" placeholder="Город" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-outline mb-4">
+                                    @if (Model.IndexCode != null)
+                                    {
+                                        <label class="text-muted">Почтовый индекс</label>
+                                    }
+                                    <input type="text" asp-for="IndexCode" value="@Model.IndexCode" placeholder="Почтовый индекс" class="form-control"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    @if (Model.Address != null)
+                                    {
+                                        <label class="text-muted">Адрес</label>
+                                    }
+                                    <input type="text" asp-for="Address" value="@Model.Address" placeholder="Адрес" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-outline mb-4">
+                                @if (Model.Phone != null)
+                                {
+                                    <label class="text-muted">Номер телефона</label>
+                                }
+                                <input type="text" asp-for="Phone" value="@Model.Phone" placeholder="Номер телефона" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="mt-3">
-            <input type="text" asp-for="Login" value="@Model.Login" placeholder="Логин"/>
-            <span asp-validation-for="Login"></span>
-        </div>
     </div>
-    <div class="row">
-        <div class="mt-3">
-            <input type="password" asp-for="Password" value="@Model.Password" placeholder="Пароль"/>
-            <span asp-validation-for="Password"></span>
-        </div>
-    </div>
-</div>
-
-<div class="text-center mt-4">
-    <h4>Личная информация</h4>
-</div>
-
-<div class="container-fluid text-center mt-3 col-lg-6 offset-lg-3">
-    <div class="mt-3">
-        <input type="text" asp-for="LastName" value="@Model.LastName" placeholder="Фамилия"/>
-        <span asp-validation-for="LastName"></span>
-    </div>
-    <div class="mt-3">
-        <input type="text" asp-for="FirstName" value="@Model.FirstName" placeholder="Имя"/>
-        <span asp-validation-for="FirstName"></span>
-    </div>
-    <div class="mt-3">
-        <input type="text" asp-for="Patronymic" value="@Model.Patronymic" placeholder="Отчество"/>
-        <span asp-validation-for="Patronymic"></span>
-    </div>
-    <div class="row">
-        <div class="mt-3">
-            <input type="text" asp-for="Area" value="@Model.Area" placeholder="Область"/>
-            <span asp-validation-for="Area"></span>
-        </div>
-        <div class="mt-3">
-            <input type="text" asp-for="City" value="@Model.City" placeholder="Город"/>
-            <span asp-validation-for="City"></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="mt-3">
-            <input type="text" asp-for="IndexCode" value="@Model.IndexCode" placeholder="Почтовый индекс"/>
-            <span asp-validation-for="IndexCode"></span>
-        </div>
-        <div class="mt-3">
-            <input type="text" asp-for="Address" value="@Model.Address" placeholder="Адрес"/>
-            <span asp-validation-for="Address"></span>
-        </div>
-    </div>
-    <div class="mt-3">
-        <input type="text" asp-for="Phone" value="@Model.Phone" placeholder="Номер телефона"/>
-        <span asp-validation-for="Phone"></span>
-    </div>
-</div>
+</section>
