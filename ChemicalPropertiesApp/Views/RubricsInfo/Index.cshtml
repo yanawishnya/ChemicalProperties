@@ -11,9 +11,9 @@
 <form asp-controller="RubricsInfo" asp-action="Index">
     <p>
         Название: <input type="text" name="searchString"/>
-        <input type="submit" value="Искать"/>
+        <button class="btn btn-primary btn-block" type="submit">Искать</button> &emsp;
+        <a asp-action="Index">Обратно к списку</a>
     </p>
-    <a href="javascript:window.location.reload()">Обратно к списку</a>
 </form>
 
 <table class="table">
@@ -48,6 +48,14 @@
     }
     </tbody>
 </table>
+
+@if (ViewContext.HttpContext.User.IsInRole("basic"))
+{
+    <div class="text-muted mt-4">
+        У вас недостаточно прав, чтобы скачать таблицу. Отправьте заявку на получение дополнительных 
+        прав в личном кабинете.
+    </div>
+}
 
 @if (ViewContext.HttpContext.User.IsInRole("privileged"))
 {

@@ -289,6 +289,14 @@
     </tbody>
 </table>
 
+@if (ViewContext.HttpContext.User.IsInRole("basic"))
+{
+    <div class="mt-4 text-muted">
+        У вас недостаточно прав, чтобы скачать таблицы. Отправьте заявку на получение дополнительных 
+        прав в личном кабинете.
+    </div>
+}
+
 @if (ViewContext.HttpContext.User.IsInRole("privileged"))
 {
     <div class="text-center">

@@ -11,7 +11,8 @@
 <form asp-controller="LitReference" asp-action="Index">
     <p>
         Название: <input type="text" name="searchString"/>
-        <input type="submit" value="Искать"/>
+        <button class="btn btn-primary btn-block" type="submit">Искать</button> &emsp;
+        <a asp-action="Index">Обратно к списку</a>
     </p>
 </form>
 
@@ -83,6 +84,14 @@
     }
     </tbody>
 </table>
+
+@if (ViewContext.HttpContext.User.IsInRole("basic"))
+{
+    <div class="text-muted mt-4">
+        У вас недостаточно прав, чтобы скачать таблицу. Отправьте заявку на получение дополнительных
+        прав в личном кабинете.
+    </div>
+}
 
 @if (ViewContext.HttpContext.User.IsInRole("privileged"))
 {

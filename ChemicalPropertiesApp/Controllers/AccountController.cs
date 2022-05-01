@@ -89,7 +89,7 @@ public class AccountController : Controller
         {
             1 => "privileged",
             2 => "basic",
-            _ => ""
+            _ => "basic"
         };
 
         var claims = new List<Claim>
