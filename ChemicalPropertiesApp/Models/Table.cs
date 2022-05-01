@@ -2,10 +2,10 @@
 
 public class Table
 {
-    public List<SolidPhase> solidPhaseTable { get; set; }
-    public List<PhaseEquilibrium> phaseEquilibriaTable { get; set; }
-    public List<PhaseEquilibriaDetail> phaseEquilibriaDetailTable { get; set; }
-    public List<ThermodynamicDataActivity> thermodynamicDataActivityTable { get; set; }
-    public List<ThermodynamicDataEnthalpy> thermodynamicDataEnthalphyTable { get; set; }
-    public List<ThermodynamicDataHeatCapacity> thermodynamicDataCapacityTable { get; set; }
+    public List<SolidPhase>? SolidPhaseTable { get; set; }
+    public List<PhaseEquilibrium>? PhaseEquilibriaTable { get; set; }
+    public List<PhaseEquilibriaDetail>? PhaseEquilibriaDetailTable { get; set; }
+    public List<ThermodynamicDataActivity>? ThermodynamicDataActivityTable { get; set; }
+    public List<ThermodynamicDataEnthalpy>? ThermodynamicDataEnthalphyTable { get; set; }
+    public List<ThermodynamicDataHeatCapacity>? ThermodynamicDataCapacityTable { get; set; }
 }

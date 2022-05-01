@@ -2,6 +2,6 @@
 
 public class Rubric
 {
-    public IQueryable<RubricsInfo> rubricsInfos { get; set; }
-    public IQueryable<TypesInfo> typesInfos { get; set; }
+    public IQueryable<RubricsInfo>? RubricsInfos { get; set; }
+    public IQueryable<TypesInfo>? TypesInfos { get; set; }
 }

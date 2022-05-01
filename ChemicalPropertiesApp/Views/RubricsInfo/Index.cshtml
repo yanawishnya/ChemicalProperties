@@ -32,7 +32,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model.rubricsInfos)
+    @foreach (var item in Model.RubricsInfos!)
     {
         <tr>
             <td>
@@ -42,7 +42,7 @@
                 @item.RubricName
             </td>
             <td>
-                @Model.typesInfos.FirstOrDefault(r => r.TypeId == item.TypeId)?.TypeName
+                @Model.TypesInfos!.FirstOrDefault(r => r.TypeId == item.TypeId)?.TypeName
             </td>
         </tr>
     }

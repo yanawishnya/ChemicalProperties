@@ -1,6 +1,5 @@
 using ChemicalPropertiesApp;
 using Microsoft.EntityFrameworkCore;
-using ChemicalPropertiesApp.Models;
 
 using CookieAuthenticationDefaults = Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationDefaults;
 
@@ -15,17 +14,10 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-// Usage of Dapper + SQL Server below here.
-builder.Services.AddTransient<IUserRepository, UserRepositorySqlServer>(provider =>
-    new UserRepositorySqlServer(builder.Configuration.GetConnectionString("default")));
-
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
 {
     options.LoginPath = new PathString("/Account/Login");
 });
-
-/*builder.Services.AddAuthentication("MyCookieAuth")
-    .AddCookie("MyCookieAuth", options => { options.Cookie.Name = "MyCookieAuth"; });*/
 
 var app = builder.Build();
 
@@ -41,9 +33,6 @@ else
     app.UseDeveloperExceptionPage();
     app.UseMigrationsEndPoint();
 }
-
-/*using var scopeServ = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
-SeedData.EnsureSeedData(scopeServ.ServiceProvider);*/
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

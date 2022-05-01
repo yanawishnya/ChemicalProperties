@@ -33,12 +33,12 @@ public class TableController : Controller
                 select thermodynamicDataHeatCapacityTable).ToList();
         var tables = new Table
         {
-            solidPhaseTable = solidPhaseTables,
-            phaseEquilibriaTable = phaseEquilibriaTables,
-            phaseEquilibriaDetailTable = phaseEquilibriaDetailTables,
-            thermodynamicDataActivityTable = thermodynamicDataActivityTables,
-            thermodynamicDataEnthalphyTable = thermodynamicDataEnthalphyTables,
-            thermodynamicDataCapacityTable = thermodynamicDataHeatCapacityTables
+            SolidPhaseTable = solidPhaseTables,
+            PhaseEquilibriaTable = phaseEquilibriaTables,
+            PhaseEquilibriaDetailTable = phaseEquilibriaDetailTables,
+            ThermodynamicDataActivityTable = thermodynamicDataActivityTables,
+            ThermodynamicDataEnthalphyTable = thermodynamicDataEnthalphyTables,
+            ThermodynamicDataCapacityTable = thermodynamicDataHeatCapacityTables
         };
         return View(tables);
     }
@@ -86,6 +86,7 @@ public class TableController : Controller
         return File(System.Text.Encoding.UTF8.GetBytes(sb.ToString()), "text/csv", "SolidPhaseTable.csv");
     }
 
+    //TODO: изменить вид таблицы и раскомментировать этот кусок.
     /*[Authorize(Roles = "privileged")]
     [HttpPost]
     public IActionResult ExportEquilibrium()

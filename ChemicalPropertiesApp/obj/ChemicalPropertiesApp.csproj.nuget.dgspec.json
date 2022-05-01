@@ -47,14 +47,6 @@
               "target": "Package",
               "version": "[2.0.123, )"
             },
-            "Microsoft.AspNet.Identity.EntityFramework": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Microsoft.AspNet.Identity.OWIN": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -80,10 +72,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.3, )"
-            },
-            "Microsoft.Owin.Host.SystemWeb": {
-              "target": "Package",
-              "version": "[2.1.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

@@ -25,8 +25,8 @@ public class RubricsInfoController : Controller
         }
         var rubrics = new Rubric
         {
-            rubricsInfos = rubricsInfos,
-            typesInfos = typesInfos
+            RubricsInfos = rubricsInfos,
+            TypesInfos = typesInfos
         };
         return View(rubrics);
     }

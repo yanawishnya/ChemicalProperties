@@ -27,7 +27,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model.solidPhaseTable)
+    @foreach (var item in Model.SolidPhaseTable!)
     {
         <tr>
             <td>
@@ -143,7 +143,7 @@
 {
     <div class="text-center">
         <form asp-action="" asp-controller="Table" method="post">
-            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу с твёрдыми фазами</button>
+            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу с фазовыми равновесиями</button>
         </form>
     </div>
 }
@@ -167,7 +167,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model.thermodynamicDataEnthalphyTable)
+    @foreach (var item in Model.ThermodynamicDataEnthalphyTable!)
     {
         <tr>
             <td>
@@ -191,7 +191,7 @@
 {
     <div class="text-center">
         <form asp-action="ExportEnthalpy" asp-controller="Table" method="post">
-            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу</button>
+            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу энтальпий</button>
         </form>
     </div>
 }
@@ -218,7 +218,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model.thermodynamicDataActivityTable)
+    @foreach (var item in Model.ThermodynamicDataActivityTable!)
     {
         <tr>
             <td>
@@ -245,7 +245,7 @@
 {
     <div class="text-center">
         <form asp-action="ExportActivity" asp-controller="Table" method="post">
-            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу</button>
+            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу активностей</button>
         </form>
     </div>
 }
@@ -269,7 +269,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model.thermodynamicDataCapacityTable)
+    @foreach (var item in Model.ThermodynamicDataCapacityTable!)
     {
         <tr>
             <td>
@@ -301,7 +301,7 @@
 {
     <div class="text-center">
         <form asp-action="ExportHeatCapacity" asp-controller="Table" method="post">
-            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу</button>
+            <button class="btn btn-primary btn-block col-xs-3 col-xs-offset-0 col-sm-offset-3 col-sm-3 mt-4" type="submit">Скачать таблицу теплоёмкостей</button>
         </form>
     </div>
 }

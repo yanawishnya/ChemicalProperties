@@ -15,18 +15,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\WebAppChemistry\ChemicalPropertiesApp\ChemicalPropertiesApp
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/_AuthLayout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX0F1dGhMYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Areas/Identity/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,10 +29,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/WebAppChemistry/ChemicalPropertiesApp/ChemicalPropertiesApp/Views/LitReference/Index.cshtml]

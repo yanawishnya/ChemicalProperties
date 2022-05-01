@@ -28,7 +28,7 @@ public class AccountController : Controller
 
     public IActionResult Profile()
     {
-        _currentUser = _misisContext.UsersInfos.FirstOrDefault(u => u.Login == User.Identity.Name);
+        _currentUser = _misisContext.UsersInfos.FirstOrDefault(u => u.Login == User.Identity!.Name)!;
         return View(_currentUser);
     }
 
@@ -42,7 +42,7 @@ public class AccountController : Controller
                 u.Login == model.Login && u.Password == model.Password);
             if (user != null)
             {
-                await Authenticate(user); // аутентификация
+                await Authenticate(user);
                 return RedirectToAction("Index", "Home");
             }
 
