@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using ChemicalPropertiesApp.Models;
+﻿using ChemicalPropertiesApp.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace ChemicalPropertiesApp
 {

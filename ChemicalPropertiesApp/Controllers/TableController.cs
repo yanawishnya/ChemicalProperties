@@ -86,33 +86,33 @@ public class TableController : Controller
         return File(System.Text.Encoding.UTF8.GetBytes(sb.ToString()), "text/csv", "SolidPhaseTable.csv");
     }
 
-    //TODO: изменить вид таблицы и раскомментировать этот кусок.
-    /*[Authorize(Roles = "privileged")]
+    [Authorize(Roles = "privileged")]
     [HttpPost]
     public IActionResult ExportEquilibrium()
     {
         var equilibriumTable = (from equilibrium in _misisContext.PhaseEquilibria.ToList()
-            select new[]
+            select new []
             {
-                equilibrium.Formula,
-                equilibrium.Temperature1.ToString(),
-                equilibrium.Temperature2.ToString(),
-                equilibrium.PearsonSymbol,
-                equilibrium.SpaceGroup,
-                equilibrium.Prototype,
-                equilibrium.LatticeA.ToString(),
-                equilibrium.LatticeAlpha.ToString(),
-                equilibrium.LatticeB.ToString(),
-                equilibrium.LatticeBeta.ToString(),
-                equilibrium.LatticeC.ToString(),
-                equilibrium.LatticeGamma.ToString(),
+                equilibrium.AnnealedTime.ToString(),
+                equilibrium.Temperature.ToString(),
+                equilibrium.TemperatureAccuracy.ToString(),
                 equilibrium.Comment
             }).ToList<object>();
 
+        var equilibriumDetailsTable = (from equilibrium in _misisContext.PhaseEquilibriaDetails.ToList()
+            select new []
+            {
+                equilibrium.Element,
+                equilibrium.Composition.ToString(),
+                equilibrium.CompositionAccuracy.ToString()
+            }).ToList<object>();
+        
+        equilibriumTable.AddRange(equilibriumDetailsTable);
+
         equilibriumTable.Insert(0, new[]
         {
-            "Formula", "Temperature 1", "Temperature 2", "Pearson Symbol", "Space Group", "Prototype", "Lattice A",
-            "Lattice Alpha", "Lattice B", "Lattice Betta", "Lattice C", "Lattice Gamma"
+            "Annealed Time", "Temperature", "Temperature Accuracy", "Comment", "Element", "Composition",
+            "Composition Accuracy"
         });
 
         var sb = new System.Text.StringBuilder();
@@ -127,9 +127,9 @@ public class TableController : Controller
             sb.Append("\r\n");
         }
 
-        return File(System.Text.Encoding.UTF8.GetBytes(sb.ToString()), "text/csv", "SolidPhaseTable.csv");
-    }*/
-    
+        return File(System.Text.Encoding.UTF8.GetBytes(sb.ToString()), "text/csv", "PhaseEquilibriaTable.csv");
+    }
+
     [Authorize(Roles = "privileged")]
     [HttpPost]
     public IActionResult ExportEnthalpy()

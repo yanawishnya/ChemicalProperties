@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using ChemicalPropertiesApp.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.EntityFrameworkCore;
 
 namespace ChemicalPropertiesApp.Controllers;
 
