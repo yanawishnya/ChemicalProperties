@@ -13,7 +13,7 @@
     <thead>
     <tr>
         <th>
-            Название фазы /<br/>Температурный диапазон (в градусах по Цельсию)
+            Название фазы /<br/>Температура 1 (в градусах по Цельсию) /<br/>Температура 2 (в градусах по Цельсию)
         </th>
         <th>
             Символ Пирсона /<br/>Пространственная группа /<br/>Прототип
@@ -32,7 +32,8 @@
         <tr>
             <td>
                 @item.Formula<br/>
-                @item.Temperature1 &lt; @item.Temperature2
+                @item.Temperature1<br/>
+                @item.Temperature2
             </td>
             <td>
                 @item.PearsonSymbol<br/>
@@ -93,50 +94,48 @@
     <thead>
     <tr>
         <th>
-            Температура (в градусах Цельсия) /<br/>Продолжительность отжига (в днях)
+            Продолжительность отжига (в днях) /<br/>Температура (в градусах Цельсия) /<br/>Погрешность температуры
         </th>
         <th>
-            Сплавы (в %) (EDS)
-        </th>
-        <th>
-            Равновесия<br/>фаза 1 / фаза 2 / фаза 3
+            Элемент
         </th>
         <th>
             Состав (в %)<br/>
-            Первая фаза<br/>
+            Погрешность состава
         </th>
         <th>
-            Состав (в %)<br/>
-            Вторая фаза<br/>
-        </th>
-        <th>
-            Состав (в %)<br/>
-            Третья фаза<br/>
+            Комментарий
         </th>
     </tr>
     </thead>
-    @*<tbody>
-    @foreach (var item in Model.phaseEquilibriaTable)
+    <tbody>
+    @foreach (var item in Model.PhaseEquilibriaTable)
     {
         <tr>
             <td>
-                @item.Temperature / @item.AnnealedTime
+                @item.AnnealedTime<br/>
+                @item.Temperature<br/>
+                @item.TemperatureAccuracy
             </td>
             <td>
-                @foreach (var detailItem in Model.phaseEquilibriaDetailTable)
+                @foreach (var detailItem in item.PhaseEquilibriaDetails)
                 {
-                    @detailItem.PhaseEquilibria.
+                    @detailItem.Element
                 }
             </td>
             <td>
-                a = @Html.DisplayFor(modelItem => item.LatticeA)
+                @foreach (var detailItem in item.PhaseEquilibriaDetails)
+                {
+                    @detailItem.Composition<br/>
+                    @detailItem.CompositionAccuracy
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Comment)
             </td>
         </tr>
     }
-    </tbody>*@
+    </tbody>
 </table>
 
 @if (ViewContext.HttpContext.User.IsInRole("privileged"))
@@ -156,7 +155,10 @@
             Реакция или транформация
         </th>
         <th>
-            Температура
+            Температура 1
+        </th>
+        <th>
+            Температура 2
         </th>
         <th>
             Энтальпия
@@ -174,7 +176,10 @@
                 @item.Reaction
             </td>
             <td>
-                @item.Temperature1 &mdash; @item.Temperature2
+                @item.Temperature1
+            </td>
+            <td>
+                @item.Temperature2
             </td>
             <td>
                 @item.Enthalpy
@@ -292,7 +297,7 @@
 @if (ViewContext.HttpContext.User.IsInRole("basic"))
 {
     <div class="mt-4 text-muted">
-        У вас недостаточно прав, чтобы скачать таблицы. Отправьте заявку на получение дополнительных 
+        У вас недостаточно прав, чтобы скачать таблицы. Отправьте заявку на получение дополнительных
         прав в личном кабинете.
     </div>
 }

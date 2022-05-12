@@ -38,7 +38,10 @@
             Номер издания
         </th>
         <th>
-            Отрывок
+            Начальная страница
+        </th>
+        <th>
+            Конечная страница
         </th>
         <th>
             DOI
@@ -72,7 +75,10 @@
                 @item.Num
             </td>
             <td>
-                стр. @item.StartPage - @item.EndPage
+                @item.StartPage
+            </td>
+            <td>
+                @item.EndPage
             </td>
             <td>
                 @item.Doi
